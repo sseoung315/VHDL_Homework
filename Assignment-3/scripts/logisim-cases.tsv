@@ -1,0 +1,42 @@
+1	rs_latch	Set	S=1,R=0	1	0
+1	rs_latch	Hold after set	S=0,R=0	1	0
+1	rs_latch	Reset	S=0,R=1	0	1
+1	rs_latch	Hold after reset	S=0,R=0	0	1
+1	rs_latch	Forbidden	S=1,R=1	0	0
+2	d_latch	Enabled zero	D=0,EN=1	0	1
+2	d_latch	Enabled one	D=1,EN=1	1	0
+2	d_latch	Hold one	D=0,EN=0	1	0
+2	d_latch	Enabled zero again	D=0,EN=1	0	1
+2	d_latch	Hold zero	D=1,EN=0	0	1
+3	d_flipflop	Prepare zero	D=0,CLK=0	-	-
+3	d_flipflop	Rising sample zero	D=0,CLK=1	0	1
+3	d_flipflop	High clock data change	D=1,CLK=1	0	1
+3	d_flipflop	Falling clock	D=1,CLK=0	0	1
+3	d_flipflop	Rising sample one	D=1,CLK=1	1	0
+3	d_flipflop	High clock data change again	D=0,CLK=1	1	0
+3	d_flipflop	Falling again	D=0,CLK=0	1	0
+3	d_flipflop	Rising sample zero again	D=0,CLK=1	0	1
+4	jk_flipflop	Initialize	J=0,K=0,CLK=0,INIT_CLR=1	0	1
+4	jk_flipflop	Release clear	J=0,K=0,CLK=0,INIT_CLR=0	0	1
+4	jk_flipflop	Hold zero rising	J=0,K=0,CLK=1,INIT_CLR=0	0	1
+4	jk_flipflop	Prepare set	J=1,K=0,CLK=0,INIT_CLR=0	0	1
+4	jk_flipflop	Set rising	J=1,K=0,CLK=1,INIT_CLR=0	1	0
+4	jk_flipflop	Prepare hold	J=0,K=0,CLK=0,INIT_CLR=0	1	0
+4	jk_flipflop	Hold one rising	J=0,K=0,CLK=1,INIT_CLR=0	1	0
+4	jk_flipflop	Prepare reset	J=0,K=1,CLK=0,INIT_CLR=0	1	0
+4	jk_flipflop	Reset rising	J=0,K=1,CLK=1,INIT_CLR=0	0	1
+4	jk_flipflop	Prepare toggle	J=1,K=1,CLK=0,INIT_CLR=0	0	1
+4	jk_flipflop	Toggle rising one	J=1,K=1,CLK=1,INIT_CLR=0	1	0
+4	jk_flipflop	High clock hold	J=1,K=1,CLK=1,INIT_CLR=0	1	0
+4	jk_flipflop	Toggle falling hold	J=1,K=1,CLK=0,INIT_CLR=0	1	0
+4	jk_flipflop	Toggle rising zero	J=1,K=1,CLK=1,INIT_CLR=0	0	1
+5	async_d_flipflop	Asynchronous clear	D=1,CLK=0,SET=0,CLR=1	0	1
+5	async_d_flipflop	Both asserted clear wins	D=1,CLK=0,SET=1,CLR=1	0	1
+5	async_d_flipflop	Asynchronous set	D=1,CLK=0,SET=1,CLR=0	1	0
+5	async_d_flipflop	Hold after release	D=0,CLK=0,SET=0,CLR=0	1	0
+5	async_d_flipflop	Rising sample zero	D=0,CLK=1,SET=0,CLR=0	0	1
+5	async_d_flipflop	High clock data change	D=1,CLK=1,SET=0,CLR=0	0	1
+5	async_d_flipflop	Falling hold	D=1,CLK=0,SET=0,CLR=0	0	1
+5	async_d_flipflop	Rising sample one	D=1,CLK=1,SET=0,CLR=0	1	0
+5	async_d_flipflop	Clear with high clock	D=1,CLK=1,SET=0,CLR=1	0	1
+5	async_d_flipflop	Set with high clock	D=0,CLK=1,SET=1,CLR=0	1	0

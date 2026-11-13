@@ -1,0 +1,26 @@
+digraph m102 {
+  rankdir=LR; graph [bgcolor="white"]; node [shape=box,fontname="Liberation Sans",fontsize=10]; edge [fontname="Liberation Sans",fontsize=8];
+  pi0 [label="\\d"];
+  pi0 -> i9 [label="n1"];
+
+  pi1 [label="\\en"];
+  pi1 -> i9 [label="n2"];
+
+  po0 [label="\\q"];
+  i6 -> po0 [label="n6"];
+
+  po1 [label="\\qb"];
+  i10 -> po1 [label="n10"];
+
+  i5 [label="$const_X"];
+  i5 -> i6 [label="n5"];
+
+  i6 [label="$isignal"];
+  i6 -> i10 [label="n6"];
+
+  i10 [label="$not"];
+
+  i9 [label="$dlatch"];
+  i9 -> i6 [label="n9"];
+
+}

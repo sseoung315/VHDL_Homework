@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use std.env.all;
+entity tb_d_flipflop is end;
+architecture test of tb_d_flipflop is
+  signal d : std_logic := '0';
+  signal clk : std_logic := '0';
+  signal q, qb : std_logic;
+begin
+  dut: entity work.d_flipflop port map (d => d, clk => clk, q => q, qb => qb);
+  stimulus: process
+  begin
+    d <= '0';
+    clk <= '0';
+    wait for 20 ns;
+    d <= '0';
+    clk <= '1';
+    wait for 20 ns;
+    assert q='0' and qb='1' report "FAIL: Rising sample zero" severity failure;
+    report "PASS: Rising sample zero";
+    d <= '1';
+    clk <= '1';
+    wait for 20 ns;
+    assert q='0' and qb='1' report "FAIL: High clock data change" severity failure;
+    report "PASS: High clock data change";
+    d <= '1';
+    clk <= '0';
+    wait for 20 ns;
+    assert q='0' and qb='1' report "FAIL: Falling clock" severity failure;
+    report "PASS: Falling clock";
+    d <= '1';
+    clk <= '1';
+    wait for 20 ns;
+    assert q='1' and qb='0' report "FAIL: Rising sample one" severity failure;
+    report "PASS: Rising sample one";
+    d <= '0';
+    clk <= '1';
+    wait for 20 ns;
+    assert q='1' and qb='0' report "FAIL: High clock data change again" severity failure;
+    report "PASS: High clock data change again";
+    d <= '0';
+    clk <= '0';
+    wait for 20 ns;
+    assert q='1' and qb='0' report "FAIL: Falling again" severity failure;
+    report "PASS: Falling again";
+    d <= '0';
+    clk <= '1';
+    wait for 20 ns;
+    assert q='0' and qb='1' report "FAIL: Rising sample zero again" severity failure;
+    report "PASS: Rising sample zero again";
+    report "ALL CASES PASS: d_flipflop";
+    finish;
+    wait;
+  end process;
+end;

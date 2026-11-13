@@ -1,0 +1,18 @@
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/vhdl/rs_latch.vhd
+
+
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/testbench/tb_rs_latch.vhd
+
+
+$ ghdl -e --std=08 tb_rs_latch
+
+
+$ ghdl -r --std=08 tb_rs_latch --assert-level=error --vcd=/workspace/work/submission-repo/Assignment-3/results/rs_latch.vcd
+/workspace/work/submission-repo/Assignment-3/testbench/tb_rs_latch.vhd:17:5:@20ns:(report note): PASS: Set
+/workspace/work/submission-repo/Assignment-3/testbench/tb_rs_latch.vhd:22:5:@40ns:(report note): PASS: Hold after set
+/workspace/work/submission-repo/Assignment-3/testbench/tb_rs_latch.vhd:27:5:@60ns:(report note): PASS: Reset
+/workspace/work/submission-repo/Assignment-3/testbench/tb_rs_latch.vhd:32:5:@80ns:(report note): PASS: Hold after reset
+/workspace/work/submission-repo/Assignment-3/testbench/tb_rs_latch.vhd:37:5:@100ns:(report note): PASS: Forbidden
+/workspace/work/submission-repo/Assignment-3/testbench/tb_rs_latch.vhd:38:5:@100ns:(report note): ALL CASES PASS: rs_latch
+simulation finished @100ns
+

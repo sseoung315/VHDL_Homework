@@ -1,0 +1,27 @@
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/vhdl/jk_flipflop.vhd
+
+
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd
+
+
+$ ghdl -e --std=08 tb_jk_flipflop
+
+
+$ ghdl -r --std=08 tb_jk_flipflop --assert-level=error --vcd=/workspace/work/submission-repo/Assignment-3/results/jk_flipflop.vcd
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:21:5:@20ns:(report note): PASS: Initialize
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:28:5:@40ns:(report note): PASS: Release clear
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:35:5:@60ns:(report note): PASS: Hold zero rising
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:42:5:@80ns:(report note): PASS: Prepare set
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:49:5:@100ns:(report note): PASS: Set rising
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:56:5:@120ns:(report note): PASS: Prepare hold
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:63:5:@140ns:(report note): PASS: Hold one rising
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:70:5:@160ns:(report note): PASS: Prepare reset
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:77:5:@180ns:(report note): PASS: Reset rising
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:84:5:@200ns:(report note): PASS: Prepare toggle
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:91:5:@220ns:(report note): PASS: Toggle rising one
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:98:5:@240ns:(report note): PASS: High clock hold
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:105:5:@260ns:(report note): PASS: Toggle falling hold
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:112:5:@280ns:(report note): PASS: Toggle rising zero
+/workspace/work/submission-repo/Assignment-3/testbench/tb_jk_flipflop.vhd:113:5:@280ns:(report note): ALL CASES PASS: jk_flipflop
+simulation finished @280ns
+

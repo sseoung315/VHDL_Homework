@@ -1,0 +1,93 @@
+digraph m102 {
+  rankdir=LR; graph [bgcolor="white"]; node [shape=box,fontname="Liberation Sans",fontsize=10]; edge [fontname="Liberation Sans",fontsize=8];
+  pi0 [label="\\j"];
+  pi0 -> i16 [label="n1"];
+  pi0 -> i15 [label="n1"];
+  pi0 -> i12 [label="n1"];
+  pi0 -> i9 [label="n1"];
+
+  pi1 [label="\\k"];
+  pi1 -> i16 [label="n2"];
+  pi1 -> i14 [label="n2"];
+  pi1 -> i13 [label="n2"];
+  pi1 -> i10 [label="n2"];
+
+  pi2 [label="\\clk"];
+  pi2 -> i8 [label="n3"];
+
+  pi3 [label="\\init_clr"];
+  pi3 -> i24 [label="n4"];
+
+  po0 [label="\\q"];
+  i6 -> po0 [label="n8"];
+
+  po1 [label="\\qb"];
+  i28 -> po1 [label="n30"];
+
+  i5 [label="$const_X"];
+  i5 -> i24 [label="n7"];
+  i5 -> i6 [label="n7"];
+
+  i6 [label="$isignal"];
+  i6 -> i28 [label="n8"];
+  i6 -> i23 [label="n8"];
+  i6 -> i18 [label="n8"];
+  i6 -> i17 [label="n8"];
+
+  i8 [label="$posedge"];
+  i8 -> i24 [label="n10"];
+
+  i9 [label="$not"];
+  i9 -> i11 [label="n11"];
+
+  i10 [label="$not"];
+  i10 -> i11 [label="n12"];
+
+  i11 [label="$and"];
+  i11 -> i23 [label="n13"];
+
+  i12 [label="$not"];
+  i12 -> i13 [label="n14"];
+
+  i13 [label="$and"];
+  i13 -> i22 [label="n15"];
+
+  i14 [label="$not"];
+  i14 -> i15 [label="n16"];
+
+  i15 [label="$and"];
+  i15 -> i20 [label="n17"];
+
+  i16 [label="$and"];
+  i16 -> i18 [label="n18"];
+
+  i17 [label="$not"];
+  i17 -> i18 [label="n19"];
+
+  i18 [label="$mux2"];
+  i18 -> i20 [label="n20"];
+
+  i19 [label="$const_UB32"];
+  i19 -> i20 [label="n21"];
+
+  i20 [label="$mux2"];
+  i20 -> i22 [label="n22"];
+
+  i21 [label="$const_UB32"];
+  i21 -> i22 [label="n23"];
+
+  i22 [label="$mux2"];
+  i22 -> i23 [label="n24"];
+
+  i23 [label="$mux2"];
+  i23 -> i24 [label="n25"];
+
+  i25 [label="$const_UB32"];
+  i25 -> i24 [label="n27"];
+
+  i28 [label="$not"];
+
+  i24 [label="$iadff"];
+  i24 -> i6 [label="n26"];
+
+}

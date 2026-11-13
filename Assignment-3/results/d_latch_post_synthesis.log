@@ -1,0 +1,15 @@
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/schematics/d_latch_synth.vhd
+
+
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/testbench/tb_d_latch.vhd
+
+
+$ ghdl -r --std=08 tb_d_latch --assert-level=error
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_latch.vhd:17:5:@20ns:(report note): PASS: Enabled zero
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_latch.vhd:22:5:@40ns:(report note): PASS: Enabled one
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_latch.vhd:27:5:@60ns:(report note): PASS: Hold one
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_latch.vhd:32:5:@80ns:(report note): PASS: Enabled zero again
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_latch.vhd:37:5:@100ns:(report note): PASS: Hold zero
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_latch.vhd:38:5:@100ns:(report note): ALL CASES PASS: d_latch
+simulation finished @100ns
+

@@ -1,0 +1,20 @@
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/vhdl/d_flipflop.vhd
+
+
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd
+
+
+$ ghdl -e --std=08 tb_d_flipflop
+
+
+$ ghdl -r --std=08 tb_d_flipflop --assert-level=error --vcd=/workspace/work/submission-repo/Assignment-3/results/d_flipflop.vcd
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd:20:5:@40ns:(report note): PASS: Rising sample zero
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd:25:5:@60ns:(report note): PASS: High clock data change
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd:30:5:@80ns:(report note): PASS: Falling clock
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd:35:5:@100ns:(report note): PASS: Rising sample one
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd:40:5:@120ns:(report note): PASS: High clock data change again
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd:45:5:@140ns:(report note): PASS: Falling again
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd:50:5:@160ns:(report note): PASS: Rising sample zero again
+/workspace/work/submission-repo/Assignment-3/testbench/tb_d_flipflop.vhd:51:5:@160ns:(report note): ALL CASES PASS: d_flipflop
+simulation finished @160ns
+

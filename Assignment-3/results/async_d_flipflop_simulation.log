@@ -1,0 +1,23 @@
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/vhdl/async_d_flipflop.vhd
+
+
+$ ghdl -a --std=08 /workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd
+
+
+$ ghdl -e --std=08 tb_async_d_flipflop
+
+
+$ ghdl -r --std=08 tb_async_d_flipflop --assert-level=error --vcd=/workspace/work/submission-repo/Assignment-3/results/async_d_flipflop.vcd
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:21:5:@20ns:(report note): PASS: Asynchronous clear
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:28:5:@40ns:(report note): PASS: Both asserted clear wins
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:35:5:@60ns:(report note): PASS: Asynchronous set
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:42:5:@80ns:(report note): PASS: Hold after release
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:49:5:@100ns:(report note): PASS: Rising sample zero
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:56:5:@120ns:(report note): PASS: High clock data change
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:63:5:@140ns:(report note): PASS: Falling hold
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:70:5:@160ns:(report note): PASS: Rising sample one
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:77:5:@180ns:(report note): PASS: Clear with high clock
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:84:5:@200ns:(report note): PASS: Set with high clock
+/workspace/work/submission-repo/Assignment-3/testbench/tb_async_d_flipflop.vhd:85:5:@200ns:(report note): ALL CASES PASS: async_d_flipflop
+simulation finished @200ns
+

@@ -1,0 +1,43 @@
+rs_latch Set Q=1 QB=0 PASS
+rs_latch Hold after set Q=1 QB=0 PASS
+rs_latch Reset Q=0 QB=1 PASS
+rs_latch Hold after reset Q=0 QB=1 PASS
+rs_latch Forbidden Q=0 QB=0 PASS
+d_latch Enabled zero Q=0 QB=1 PASS
+d_latch Enabled one Q=1 QB=0 PASS
+d_latch Hold one Q=1 QB=0 PASS
+d_latch Enabled zero again Q=0 QB=1 PASS
+d_latch Hold zero Q=0 QB=1 PASS
+d_flipflop Prepare zero Q=E QB=E SETUP
+d_flipflop Rising sample zero Q=0 QB=1 PASS
+d_flipflop High clock data change Q=0 QB=1 PASS
+d_flipflop Falling clock Q=0 QB=1 PASS
+d_flipflop Rising sample one Q=1 QB=0 PASS
+d_flipflop High clock data change again Q=1 QB=0 PASS
+d_flipflop Falling again Q=1 QB=0 PASS
+d_flipflop Rising sample zero again Q=0 QB=1 PASS
+jk_flipflop Initialize Q=0 QB=1 PASS
+jk_flipflop Release clear Q=0 QB=1 PASS
+jk_flipflop Hold zero rising Q=0 QB=1 PASS
+jk_flipflop Prepare set Q=0 QB=1 PASS
+jk_flipflop Set rising Q=1 QB=0 PASS
+jk_flipflop Prepare hold Q=1 QB=0 PASS
+jk_flipflop Hold one rising Q=1 QB=0 PASS
+jk_flipflop Prepare reset Q=1 QB=0 PASS
+jk_flipflop Reset rising Q=0 QB=1 PASS
+jk_flipflop Prepare toggle Q=0 QB=1 PASS
+jk_flipflop Toggle rising one Q=1 QB=0 PASS
+jk_flipflop High clock hold Q=1 QB=0 PASS
+jk_flipflop Toggle falling hold Q=1 QB=0 PASS
+jk_flipflop Toggle rising zero Q=0 QB=1 PASS
+async_d_flipflop Asynchronous clear Q=0 QB=1 PASS
+async_d_flipflop Both asserted clear wins Q=0 QB=1 PASS
+async_d_flipflop Asynchronous set Q=1 QB=0 PASS
+async_d_flipflop Hold after release Q=1 QB=0 PASS
+async_d_flipflop Rising sample zero Q=0 QB=1 PASS
+async_d_flipflop High clock data change Q=0 QB=1 PASS
+async_d_flipflop Falling hold Q=0 QB=1 PASS
+async_d_flipflop Rising sample one Q=1 QB=0 PASS
+async_d_flipflop Clear with high clock Q=0 QB=1 PASS
+async_d_flipflop Set with high clock Q=1 QB=0 PASS
+FAILURES=0
